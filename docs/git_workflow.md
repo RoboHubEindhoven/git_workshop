@@ -80,6 +80,8 @@ Always start your branch name with something meaningful. There are a few standar
 | test/..    | Used when you want to test certain features or do a full test of the system but you are adding files. Might be merged back into parrent branch but not needed if no fixes where done.|
 | docs/..    | Used when you're working on some big part of the documentation but also are working on features on an other branch. |
 |junk/..    | Nobody want to admit that they use junk branches for experiments or simple tests. but since it is going to happen this might be easy to seperate them from the rest.|
+**Examples:**
+`feature/get_arm_joint_info`, `fix/no_network_error`, `junk/add_objects_as_stl`
 
 
 ## Commit message convention:
@@ -96,10 +98,29 @@ We would really appreciate if everyone would start with a starting word. :
 | wip: |        "Work In Progress" when you want to save but still need to test or even just working on it. |
 | feat: |       a new feature has been added. |
 | refactor: |   when a your change gives the same functional outcome but changes the code significantly |
- 
+**Examples:**
+`fix: Changed network settings to a environment depended variable.`,
+`doc: Documented code with docstrings`
+
 ## Pull request description convention:
+Add this to the Pull Request description when you want your code to be 
+merged into master. 
+```
+**Checks:**
+* [x] Tested on simulation
+* [ ] Tested on hardware
+* [ ] Added docstrings to the code
+* [ ] Made necessary changes to dependencies
+* [ ] Added changes to installation documentation
+**New Features:**
 
-
-
+```
+**Checks:**
+* [x] Tested on simulation
+* [ ] Tested on hardware
+* [ ] Added docstrings to the code
+* [ ] Made necessary changes to dependencies
+* [ ] Added changes to installation documentation
+**New Features:**
 
 
