@@ -25,13 +25,13 @@ GitHub makes it easy to review and comment code changes. This is important
 to provide good quality of code. This also improves the speed of development
 since people have good insight in what is being developed. 
 
-### Starting a project:
+### Starting a repo:
 First make sure there is an specific repo for the project. Sometimes it is smarter to 
 devide projects into smaller repo's. For instance we could keep the RoboCup tools
  seperated from the robot projects. Always discuss the creation of repositories with 
 git masters. A repo always only contains one README.md and one License. <br>
 * README.md: in the readme you put a basic explination about your repo and
-how to install it on your system. View this example!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+how to install it on your system. View this [example](https://github.com/RoboHubEindhoven-User/suii_image_processing)
 * LICENSE: as a license we always make our package under the BSD 3-Clause 
 License. Just copy the file into your 
 repository when generating the repo.
@@ -52,6 +52,22 @@ updated in relation to the growth of your project.
 
 If you have these files ready in your directory on your computer. Do what
 is explained in the following [link](https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line)
+
+# Adding stuff to your repo
+If you want to add something to the repo you always want to add an new branch
+to work on. This can be named anything but we hold ourselfs to some [name
+conventions](#branch-name-convention)
+You create a branch by running:
+```
+git checkout -b feature/your_new_feature
+```
+    
+## Adding a file to your repo:
+To add the file to the git index localy on your computer run the command:
+```
+git add sourcefolder/filename.py
+```
+Do an local commit 
 
 # Git naming conventions:
 To keep our github clean and understandable for everyone it is important 
@@ -79,7 +95,8 @@ Always start your branch name with something meaningful. There are a few standar
 | fix/..     | Used when you are fixing an bug on the branch you're branching from.|
 | test/..    | Used when you want to test certain features or do a full test of the system but you are adding files. Might be merged back into parrent branch but not needed if no fixes where done.|
 | docs/..    | Used when you're working on some big part of the documentation but also are working on features on an other branch. |
-|junk/..    | Nobody want to admit that they use junk branches for experiments or simple tests. but since it is going to happen this might be easy to seperate them from the rest.|
+|   junk/..    | Nobody want to admit that they use junk branches for experiments or simple tests. but since it is going to happen this might be easy to seperate them from the rest.|
+
 **Examples:**
 `feature/get_arm_joint_info`, `fix/no_network_error`, `junk/add_objects_as_stl`
 
@@ -98,6 +115,7 @@ We would really appreciate if everyone would start with a starting word. :
 | wip: |        "Work In Progress" when you want to save but still need to test or even just working on it. |
 | feat: |       a new feature has been added. |
 | refactor: |   when a your change gives the same functional outcome but changes the code significantly |
+
 **Examples:**
 `fix: Changed network settings to a environment depended variable.`,
 `doc: Documented code with docstrings`
@@ -105,6 +123,7 @@ We would really appreciate if everyone would start with a starting word. :
 ## Pull request description convention:
 Add this to the Pull Request description when you want your code to be 
 merged into master. 
+
 ```
 **Checks:**
 * [x] Tested on simulation
@@ -113,14 +132,15 @@ merged into master.
 * [ ] Made necessary changes to dependencies
 * [ ] Added changes to installation documentation
 **New Features:**
-
 ```
+
 **Checks:**
 * [x] Tested on simulation
 * [ ] Tested on hardware
 * [ ] Added docstrings to the code
 * [ ] Made necessary changes to dependencies
 * [ ] Added changes to installation documentation
+
 **New Features:**
 
 
