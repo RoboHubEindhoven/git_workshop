@@ -102,7 +102,7 @@ Always start your branch name with something meaningful. There are a few standar
 
 
 ## Commit message convention:
-Commit message are really important to give an fast overview of what happend in the 
+Commit message are really important to give an fast overview **of** what happend in the 
 branch and might describe the reasoning for some changes.
 We would really appreciate if everyone would start with a starting word. :
 
