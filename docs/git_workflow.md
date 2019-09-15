@@ -1,7 +1,7 @@
-# Git/Github workflow
+# Git/GitHub workflow
 
 This document will try to explain how we (RoboHub-Eindhoven) want to
- work with Git and Github.
+ work with Git and GitHub.
 
 ## Git
 Git is an open source version-control system. It keeps track of the full 
@@ -67,11 +67,27 @@ To add the file to the git index localy on your computer run the command:
 ```
 git add sourcefolder/filename.py
 ```
-Do an local commit 
+Do an local commit: 
+```
+git commit -m "doc: the commit message"
+```
+If you have a certain amount of code that you want to merge or be reviewed 
+then you can push:
+```
+git push
+```
+NEVER DO a `git merge feature/branch` in your local master.
+This merges your branch into master without a pull request. 
 
+When in doubt you can check git's status by running `git status` or `git
+diff` 
+
+The git push can trigger a pull request, if you work in terminal 
+you can just click the link and GitHub will open a new pull request.
+This can also alway be done manualy on GitHub.
 # Git naming conventions:
-To keep our github clean and understandable for everyone it is important 
-that there is an convention for naming everything on github.
+To keep our GitHub clean and understandable for everyone it is important 
+that there is an convention for naming everything on GitHub.
 ## Repository naming convention:
 For a new repo we use an basic naming scheme:
 ```
