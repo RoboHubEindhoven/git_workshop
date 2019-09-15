@@ -82,9 +82,37 @@ This merges your branch into master without a pull request.
 When in doubt you can check git's status by running `git status` or `git
 diff` 
 
+## Making a GitHub Pull Request:
 The git push can trigger a pull request, if you work in terminal 
 you can just click the link and GitHub will open a new pull request.
-This can also alway be done manualy on GitHub.
+If a git push is not done on that branch yet, git will respond with the 
+remark that you should use the upstream argument. 
+What `git push --set-upstream origin branch/name` spits back.
+``` bash
+ruben@lenov:~/workspace/git_workshop$     git push --set-upstream origin feature/readme
+Username for 'https://github.com': ruben-arts
+Password for 'https://ruben-arts@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 136.30 KiB | 11.36 MiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'feature/readme' on GitHub by visiting:
+remote:      https://github.com/RoboHubEindhoven/git_workshop/pull/new/feature/readme
+remote: 
+To https://github.com/RoboHubEindhoven/git_workshop.git
+ * [new branch]      feature/readme -> feature/readme
+Branch 'feature/readme' set up to track remote branch 'feature/readme' from 'origin'.
+```
+This can also alway be done manualy on GitHub. By clicking the green "open 
+Pull Request" button.
+In the pull request always fill in the description with as much useful 
+information as possible. 
+Put `git masters` as assignee's and put the people you work with as `reviewers`.
+
+
 # Git naming conventions:
 To keep our GitHub clean and understandable for everyone it is important 
 that there is an convention for naming everything on GitHub.
