@@ -60,7 +60,7 @@ year_doomsday = check_years_doomsday(year)
 doomsday_of_month = doomsday_of_month_checker(year, month)
 
 
-#print "doomsday_of_month is : ",doomsday_of_month
+print "doomsday_of_month is : ",doomsday_of_month
 
 diff_days = day-doomsday_of_month
 tmp = diff_days+year_doomsday

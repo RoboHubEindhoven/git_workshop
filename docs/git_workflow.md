@@ -5,30 +5,30 @@ This document will try to explain how we (RoboHub-Eindhoven) want to
 
 ## Git
 Git is an open source version-control system. It keeps track of the full 
-history of the source code during an software development project. 
+history of the source code during a software development project. 
 The original author of Git is [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds)  
-Git was designed as a necessity for linus to manage his bigger project 
-which was linux. 
+Git was designed as a necessity for Linus to manage his bigger project 
+which was Linux. 
 
 ## GitHub
-GitHub is an company that provides hosting software version control 
+GitHub is an company that provides hosting software version-control 
 using Git. GitHub is a free version for people like us. Companies can pay
 for more functionality and privacy. There are more company's that deliver 
-a simular kind of service for instance [BitBucket](https://bitbucket.org/product/) 
+a similar kind of service for instance [BitBucket](https://bitbucket.org/product/) 
 or [Gitlab](https://about.gitlab.com/). 
 
 ## Use of GitHub:
 We can use GitHub as a tool that helps us keep track of the code that is
- writen for our project. Everyone in our group should have his own account 
- on which he has certain rights towards the code on our project.
+writen for our project. Everyone in our group should have his own account 
+on which he has certain rights towards the code on our project.
 GitHub makes it easy to review and comment code changes. This is important 
 to provide good quality of code. This also improves the speed of development
 since people have good insight in what is being developed. 
 
-### Starting a repo:
-First make sure there is an specific repo for the project. Sometimes it is smarter to 
-devide projects into smaller repo's. For instance we could keep the RoboCup tools
- seperated from the robot projects. Always discuss the creation of repositories with 
+### Starting a repository:
+First make sure there is a specific repository (repo for short) for the project. Sometimes it is smarter to 
+divide projects into smaller repo's. For instance we could keep the RoboCup tools
+seperated from the robot projects. Always discuss the creation of repositories with 
 git masters. A repo always only contains one README.md and one License. <br>
 * README.md: in the readme you put a basic explination about your repo and
 how to install it on your system. View this [example](https://github.com/RoboHubEindhoven-User/suii_image_processing)
@@ -43,7 +43,7 @@ our main lead. But before we upload it to git we always want to have
 some files and directory that 
 are needed or recommended for Git. 
 * docs/ : In the docs directory you put the documentation of your project
-normaly written in Markdown because it is easy. Keeping your documentation 
+preferably written in Markdown (.md ending) because it is easy and clean. Keeping your documentation 
 in your git repo is 
 important for also having version control over your documentation. You 
 want to have the documentation
@@ -67,7 +67,11 @@ To add the file to the git index localy on your computer run the command:
 ```
 git add sourcefolder/filename.py
 ```
-Do an local commit: 
+To add everything from a git repository, you can use the following:
+```
+git add *
+```
+Do a local commit: 
 ```
 git commit -m "doc: the commit message"
 ```
@@ -121,7 +125,7 @@ For a new repo we use an basic naming scheme:
 ```
 {project}_{subject}_{technique}
 ```
-So for suii 3d vision it might be: `suii_vision_3d` and for the yolo_vision it is `suii_vision_yolo`.
+So for suii 3D vision it might be: `suii_vision_3d` and for the yolo_vision it is `suii_vision_yolo`.
 If the repo is not for a certain technique just use the first two like `suii_base` 
 This is always in lowercase with underscores(_) as separator.
 
@@ -136,19 +140,19 @@ Always start your branch name with something meaningful. There are a few standar
 | Tag | Description |
 |------|-----------------|
 | feature/.. | Used for a new feature as an addition on the branch you're branching from.|
-| fix/..     | Used when you are fixing an bug on the branch you're branching from.|
-| test/..    | Used when you want to test certain features or do a full test of the system but you are adding files. Might be merged back into parrent branch but not needed if no fixes where done.|
-| docs/..    | Used when you're working on some big part of the documentation but also are working on features on an other branch. |
-|   junk/..    | Nobody want to admit that they use junk branches for experiments or simple tests. but since it is going to happen this might be easy to seperate them from the rest.|
+| fix/..     | Used when you are fixing a bug on the branch you're branching from.|
+| test/..    | Used when you want to test certain features or do a full test of the system but you are adding files. Might be merged back into parent branch but not needed if no fixes where done.|
+| docs/..    | Used when you're working on some big part of the documentation but also are working on features on another branch.|
+|   junk/..    | Nobody wants to admit that they use junk branches for experiments or simple tests, but since it is going to happen this might be easy to seperate them from the rest.|
 
 **Examples:**
 `feature/get_arm_joint_info`, `fix/no_network_error`, `junk/add_objects_as_stl`
 
 
 ## Commit message convention:
-Commit message are really important to give an fast overview of what happend in the 
+Commit message are really important to give a fast overview **of** what happend in the 
 branch and might describe the reasoning for some changes.
-We would really appreciate if everyone would start with a starting word. :
+We would really appreciate if everyone would start with a starting word:
 
 | Tag | Description |
 |------|-----------------|
@@ -157,8 +161,8 @@ We would really appreciate if everyone would start with a starting word. :
 | cleanup:.. |   When you commit only cleanups and no functional changes |
 | calib: |  When you change calibration files |
 | wip: |        "Work In Progress" when you want to save but still need to test or even just working on it. |
-| feat: |       a new feature has been added. |
-| refactor: |   when a your change gives the same functional outcome but changes the code significantly |
+| feat: |       A new feature has been added. |
+| refactor: |   When a your change gives the same functional outcome but changes the code significantly |
 
 **Examples:**
 `fix: Changed network settings to a environment depended variable.`,
