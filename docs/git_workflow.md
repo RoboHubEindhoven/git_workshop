@@ -188,3 +188,13 @@ merged into master.
 **New Features:**
 
 
+
+# Handy git tools:
+|Tool | Description | Link |
+|-----|-------------|------|
+|GitCola | An easy to use git user interface. |[GitCola](https://git-cola.github.io/)|
+|GitKraken| An easy to use git user interface. Much bigger then GitCola|[GitKraken](https://www.gitkraken.com/git-client)|
+|bash-git-prompt| When installing git it is really hard to work with it all the git statuses use a bash prompter. This is a nice one but there are way more flavours| [Bash-Git-Prompt](https://github.com/magicmonty/bash-git-prompt)|
+|Git adog| This is just an commandline tool from git itself run `git log --all --decorate --oneline --graph` Make an alias for this like `git-adog`||
+
+
