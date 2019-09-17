@@ -4,8 +4,8 @@ print "This is "+name+"'s file"
 year =  input("Give the year in 4 digits    : ")
 month = input("Give the number or the month : ")
 day =   input("Give the number of the day   : ")
-
-doomsday = 0
+#test
+doomsday = 0 
 
 doomsday_month = [0, 31, 28, 7, 4, 9, 6, 11, 8, 5, 10, 7, 12]
 
@@ -28,7 +28,7 @@ def check_years_doomsday(year):
 	else:
 		print("Date not available for calculation")
 		return
-	#print "century = ",century
+	#printt "century = ",century
  
 	y = year - century*100
 	doomsday = ((y+(y/4))%7 + century_doomsday)%7
