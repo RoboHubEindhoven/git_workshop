@@ -75,20 +75,48 @@ Do a local commit:
 ```
 git commit -m "doc: the commit message"
 ```
-If you have a certain amount of code that you want to merge or be reviewed 
-then you can push:
+If you have a certain amount of code that you want to merge, be reviewed 
+or just have online, then you can push:
 ```
 git push
 ```
-NEVER DO a `git merge feature/branch` in your local master.
-This merges your branch into master without a pull request. 
+git push sometimes spits back that you need to make it upstream. If 
+it happens please do. Check [Pull Requests](#making-a-github-pull-request)
 
 When in doubt you can check git's status by running `git status` or `git
 diff` 
 
+## Making a GitHub Pull Request:
 The git push can trigger a pull request, if you work in terminal 
 you can just click the link and GitHub will open a new pull request.
-This can also alway be done manualy on GitHub.
+If a git push is not done on that branch yet, git will respond with the 
+remark that you should use the upstream argument. 
+What `git push --set-upstream origin branch/name` spits back.
+``` bash
+ruben@lenov:~/workspace/git_workshop$     git push --set-upstream origin feature/readme
+Username for 'https://github.com': ruben-arts
+Password for 'https://ruben-arts@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 136.30 KiB | 11.36 MiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'feature/readme' on GitHub by visiting:
+remote:      https://github.com/RoboHubEindhoven/git_workshop/pull/new/feature/readme
+remote: 
+To https://github.com/RoboHubEindhoven/git_workshop.git
+ * [new branch]      feature/readme -> feature/readme
+Branch 'feature/readme' set up to track remote branch 'feature/readme' from 'origin'.
+```
+This can also alway be done manualy on GitHub. By clicking the green "open 
+Pull Request" button.
+In the pull request always fill in the description with as much useful 
+information as possible. 
+Put `git masters` as assignee's and put the people you work with as `reviewers`.
+
+
 # Git naming conventions:
 To keep our GitHub clean and understandable for everyone it is important 
 that there is an convention for naming everything on GitHub.
@@ -163,4 +191,40 @@ merged into master.
 
 **New Features:**
 
+## Packaging:
+When we make a new repo we are mostly using the ros package convention
+which can be found [here](http://wiki.ros.org/Packages). 
+Just as a summation:
+* src/: is for your source files, normaly you will specify your package 
+name again to make it easier for separation in the compiler. 
+* scripts/: here you put your scripts that are executable.  
 
+# Handy git tools:
+|Tool | Description | Link |
+|-----|-------------|------|
+|GitCola | An easy to use git user interface. |[GitCola](https://git-cola.github.io/)|
+|GitKraken| An easy to use git user interface. Much bigger then GitCola|[GitKraken](https://www.gitkraken.com/git-client)|
+|bash-git-prompt| When installing git it is really hard to work with it all the git statuses use a bash prompter. This is a nice one but there are way more flavours| [Bash-Git-Prompt](https://github.com/magicmonty/bash-git-prompt)|
+|Git adog| This is just an commandline tool from git itself run `git log --all --decorate --oneline --graph` Make an alias for this like `git-adog`||
+
+# Never:
+NEVER DO a `git merge feature/branch` in your local master.
+This merges your branch into master without a pull request. Always
+do it the other way. If you want to get uptodate with master just run:
+```
+git checkout master
+git pull
+git checkout yourbranch
+git merge master
+```
+
+# FAQ:
+* **My code is diffrent from the online code**: do a `git pull` and then a `git push` 
+this syncs the repos.
+* **I can't checkout :` error: Your local changes to the following files would be overwritten by checkout`**. 
+first add and commit your changes to your local repo's than you are allowed to change branches.
+* **I don't want to commit my changes yet but i need to change branches**: use `git stash` this saves
+but doesn't commit yet. More info [here](https://git-scm.com/book/en/v1/Git-Tools-Stashing)
+* **I f*cked up the last commit**: `git reset HEAD~1 --hard` sets you one commit back. After this commit the changes and you are ready to go again.
+* **That was not the fix something else is broken**: look on this [page](https://ohshitgit.com/):
+ 
