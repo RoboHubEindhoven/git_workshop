@@ -1,3 +1,5 @@
+name = "Remco"
+print "This is "+name+"'s file"
 year =  input("Give the year in 4 digits    : ")
 month = input("Give the number or the month : ")
 day =   input("Give the number of the day   : ")
@@ -7,9 +9,6 @@ doomsday = 0
 doomsday_month = [0, 31, 28, 7, 4, 9, 6, 11, 8, 5, 10, 7, 12]
 
 weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-
-
-
 
 
 
@@ -70,4 +69,3 @@ day_name_of_week = weekday[day_of_week]
 #print "day of the week is :",day_of_week
 
 print "That day was a:",day_name_of_week
-
