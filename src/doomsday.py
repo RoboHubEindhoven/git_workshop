@@ -60,7 +60,7 @@ year_doomsday = check_years_doomsday(year)
 doomsday_of_month = doomsday_of_month_checker(year, month)
 
 
-print "doomsday_of_month is : ",doomsday_of_month
+print ("doomsday_of_month is : {}".format(doomsday_of_month))
 
 diff_days = day-doomsday_of_month
 tmp = diff_days+year_doomsday
@@ -69,5 +69,5 @@ day_name_of_week = weekday[day_of_week]
 
 #print "day of the week is :",day_of_week
 
-print "That day was a:",day_name_of_week
+print ("That day was a: {}".format(day_name_of_week))
 
